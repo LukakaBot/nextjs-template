@@ -5,8 +5,8 @@ import Footer from '@/components/layout/Footer/Footer';
 import './globals.css';
 
 export const metadata: Metadata = {
-	title: 'Serene Icon',
-	description: 'Serene Icon',
+	title: 'Next.js Template',
+	description: 'Next.js Template',
 };
 
 export default function RootLayout({
