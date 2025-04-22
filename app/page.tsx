@@ -1,14 +1,14 @@
-import request from '@/utils/request';
+'use client';
 
-export default async function Home() {
-	const res = await request.get(
-		'http://36.133.91.245:6084/x/edp/customerDemandController/selectDemand'
-	);
-	// const res = await fetch(
-	// 	'http://36.133.91.245:6084/x/edp/customerDemandController/selectDemand'
-	// );
-	console.log(res);
-	console.log(process.env)
+import { useEffect } from 'react';
+
+function Home() {
+	console.log('home');
+	console.log(process.env);
+	useEffect(() => {
+		window.$bucket?.set('test', 'test');
+		window.$bucket?.set('token', 'token');
+	}, []);
 
 	return (
 		<>
@@ -16,3 +16,5 @@ export default async function Home() {
 		</>
 	);
 }
+
+export default Home;
