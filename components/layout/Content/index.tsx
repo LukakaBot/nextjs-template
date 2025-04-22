@@ -1,5 +1,5 @@
 interface ContentProps {
-	children: React.ReactNode;
+	children: Readonly<React.ReactNode>;
 }
 
 function Content({ children }: ContentProps) {
