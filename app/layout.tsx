@@ -1,8 +1,9 @@
 import type { Metadata } from 'next';
 import Provider from './provider';
-import Header from '@/components/layout/Header/Header';
-import Footer from '@/components/layout/Footer/Footer';
 import './globals.css';
+import Header from '@/components/layout/Header/Header';
+import Content from '@/components/layout/Content';
+import Footer from '@/components/layout/Footer/Footer';
 
 export const metadata: Metadata = {
 	title: 'Next.js Template',
@@ -20,7 +21,7 @@ export default function RootLayout({
 			<body className='min-h-screen'>
 				<Provider>
 					<Header />
-					<main className='dark text-foreground bg-background'>{children}</main>
+					<Content>{children}</Content>
 					<Footer />
 				</Provider>
 			</body>
