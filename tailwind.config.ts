@@ -1,5 +1,7 @@
 import type { Config } from "tailwindcss";
+import defaultTheme from "tailwindcss/defaultTheme";
 import { heroui } from "@heroui/react";
+
 
 export default {
   content: [
@@ -14,6 +16,9 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+    },
+    fontFamily: {
+      sans: ["Inter", ...defaultTheme.fontFamily.sans],
     },
   },
   darkMode: "class",
